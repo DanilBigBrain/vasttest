@@ -41,6 +41,12 @@ class VpaidAd {
         this.slot.style.display = "none"; // Скрыть плеер и кнопки
     }
 
+    // Функция getAdIcons() — обязательная для IMA SDK
+    getAdIcons() {
+        // Возвращаем массив иконок, пустой массив если иконок нет
+        return [];
+    }
+
     // Дополнительные обязательные функции для IMA SDK
     startAd() {
         console.log("Реклама началась");
