@@ -34,6 +34,37 @@ class VpaidAd {
         this.videoPlayer.src = videoUrl;
         this.videoPlayer.play();
     }
+
+    // Функция collapseAd() — требуется для корректной работы с IMA SDK
+    collapseAd() {
+        console.log("Реклама свернута.");
+        this.slot.style.display = "none"; // Скрыть плеер и кнопки
+    }
+
+    // Дополнительные обязательные функции для IMA SDK
+    startAd() {
+        console.log("Реклама началась");
+    }
+
+    stopAd() {
+        console.log("Реклама остановлена");
+    }
+
+    skipAd() {
+        console.log("Реклама пропущена");
+    }
+
+    pauseAd() {
+        console.log("Реклама приостановлена");
+    }
+
+    resumeAd() {
+        console.log("Реклама возобновлена");
+    }
+
+    expandAd() {
+        console.log("Реклама развернута");
+    }
 }
 
 // Экспорт класса для VPAID
