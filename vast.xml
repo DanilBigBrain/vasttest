@@ -2,38 +2,33 @@
     <Ad id="1">
         <InLine>
             <AdSystem>Google IMA</AdSystem>
-            <AdTitle>Выбери видео</AdTitle>
-            <Description>Кликни на одно из видео</Description>
-
-            <!-- Отслеживание событий -->
-            <Impression><![CDATA[https://tracker.com/impression]]></Impression>
+            <AdTitle>Выберите видео</AdTitle>
+            <Description>Кликните на одно из видео</Description>
 
             <Creatives>
                 <Creative sequence="1" AdID="100">
                     <Linear>
                         <Duration>00:00:10</Duration>
 
-                        <TrackingEvents>
-                            <Tracking event="start"><![CDATA[https://tracker.com/start]]></Tracking>
-                            <Tracking event="complete"><![CDATA[https://tracker.com/complete]]></Tracking>
-                            <Tracking event="click"><![CDATA[https://tracker.com/click]]></Tracking>
-                        </TrackingEvents>
-
-                        <!-- Передача ссылок на видео -->
+                        <!-- Передача ссылок и названий видео -->
                         <AdParameters>
                             <![CDATA[
                                 {
-                                    "video1": "https://www.w3schools.com/html/mov_bbb.mp4",
-                                    "video2": "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
-                                    "clickTrack1": "https://tracker.com/click_video1",
-                                    "clickTrack2": "https://tracker.com/click_video2"
+                                    "video1": {
+                                        "url": "https://www.w3schools.com/html/mov_bbb.mp4",
+                                        "title": "Первое видео"
+                                    },
+                                    "video2": {
+                                        "url": "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+                                        "title": "Второе видео"
+                                    }
                                 }
                             ]]>
                         </AdParameters>
 
                         <MediaFiles>
                             <MediaFile id="1" delivery="progressive" apiFramework="VPAID" type="application/javascript" width="640" height="360">
-                                <![CDATA[https://ТВОЙ_СЕРВЕР/vpaid.js]]>
+                                <![CDATA[https://danilbigbrain.github.io/vasttest/vpaid.js]]>
                             </MediaFile>
                         </MediaFiles>
                     </Linear>
