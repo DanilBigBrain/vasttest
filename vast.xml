@@ -1,0 +1,38 @@
+<VAST version="3.0">
+    <Ad id="1">
+        <InLine>
+            <AdSystem>Google IMA</AdSystem>
+            <AdTitle>Тестовая реклама</AdTitle>
+            <Description>Это тестовая реклама с кликами</Description>
+
+           
+            <Impression><![CDATA[https://tracker.com/impression]]></Impression>
+
+            <Creatives>
+                <Creative sequence="1" AdID="100">
+                    <Linear>
+                        <Duration>00:00:10</Duration>  
+
+                        <TrackingEvents>
+                            <Tracking event="start"><![CDATA[https://tracker.com/start]]></Tracking>
+                            <Tracking event="complete"><![CDATA[https://tracker.com/complete]]></Tracking>
+                        </TrackingEvents>
+
+                       
+                        <VideoClicks>
+                            <ClickThrough><![CDATA[https://example.com]]></ClickThrough>
+                            <ClickTracking><![CDATA[https://tracker.com/click]]></ClickTracking>
+                        </VideoClicks>
+
+                      
+                        <MediaFiles>
+                            <MediaFile id="1" delivery="progressive" type="video/mp4" width="640" height="360">
+                                <![CDATA[https://www.w3schools.com/html/mov_bbb.mp4]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>
